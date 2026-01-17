@@ -4,8 +4,11 @@
 
 type Query {
   dashboardStats: String!
+  products: [String!]!
 }
 
 type Mutation {
   login(email: String!, password: String!): String!
+  addProduct(name: String!, quantity: Int!, price: Float!): String!
+  updateProduct(id: Int!, name: String!, quantity: Int!, price: Float!): String!
 }
