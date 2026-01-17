@@ -3,27 +3,24 @@ const { PrismaClient } = require('../generated/prisma');
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🚀 Prisma test started');
-
+  // Create a product
   const product = await prisma.product.create({
     data: {
-      name: 'Test Product',
+      name: "Test Product",
       quantity: 10,
       price: 99.99,
     },
   });
 
-  console.log('✅ Created product:', product);
+  console.log("Created product:", product);
 
+  // Read all products
   const products = await prisma.product.findMany();
-  console.log('📦 All products:', products);
+  console.log("All products:", products);
 }
 
 main()
-  .catch((e) => {
-    console.error('❌ Error:', e);
-  })
+  .catch((e) => console.error(e))
   .finally(async () => {
     await prisma.$disconnect();
-    console.log('🔌 Prisma disconnected');
   });
