@@ -1,0 +1,11 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  dashboardStats: String!
+}
+
+type Mutation {
+  login(email: String!, password: String!): String!
+}

@@ -22,9 +22,9 @@ export class AuthService {
     }
 
     // 3️⃣ Compare hashed password
-    const isPasswordValid = await bcrypt.compare(
+    const isPasswordValid = await bcrypt.compare( 
       password,
-      user.password,
+      user.password, 
     );
 
     if (!isPasswordValid) {
