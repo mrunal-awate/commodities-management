@@ -6,12 +6,12 @@ describe('AppController', () => {
   let appController: AppController;
 
   beforeEach(async () => {
-    const app: TestingModule = await Test.createTestingModule({
+    const app: TestingModule = await Test.createTestingModule({             // test module creation
       controllers: [AppController],
       providers: [AppService],
     }).compile();
 
-    appController = app.get<AppController>(AppController);
+    appController = app.get<AppController>(AppController);            // app controller retrieval
   });
 
   describe('root', () => {

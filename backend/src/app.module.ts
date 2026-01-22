@@ -10,7 +10,7 @@ import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
-    GraphQLModule.forRoot<ApolloDriverConfig>({
+    GraphQLModule.forRoot<ApolloDriverConfig>({                   // graphql module
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       context: ({ req }) => ({ req }),
